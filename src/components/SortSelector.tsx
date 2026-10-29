@@ -16,9 +16,8 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
     { value: "-rating", label: "Avarage rating" },
   ];
 
-  const currentSortOrder = sortOrders.find(
-    (order) => order.value === sortOrder,
-  );
+  const currentSortOrder =
+    sortOrders.find((order) => order.value === sortOrder) ?? sortOrders[0];
 
   return (
     <Menu.Root>
