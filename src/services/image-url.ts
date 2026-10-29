@@ -1,4 +1,6 @@
-const getCroppedImageUrl = (url: string) => {
+const getCroppedImageUrl = (url: string | null) => {
+  if (!url) return undefined;
+
   const target = "media/";
   const targetIndex = url.indexOf(target);
 
